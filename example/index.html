@@ -1,0 +1,164 @@
+<html>
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>	
+<script type="text/javascript" src="../form.js"></script>
+
+</head>
+<body>
+	<div id="form"></div>
+
+</body>
+
+<script type="text/javascript">
+	
+
+new Forms("form", [
+                    {
+                        type: "input",
+                        name: "name",
+                        label: "Name",
+                        value: "Meeraj Wadhwa",
+                        required: true,
+                        attrs: {
+                            placeholder: "Name"
+                        },
+                        errorMessage: "Please enter Name"
+                    },
+                    {
+                        type: "input",
+                        name: "fatherName",
+                        label: "Father's Name",
+                        required: true,
+                        attrs: {
+                            placeholder: "Father Name"
+                        },
+                        errorMessage: "Please enter Father Name"
+                    },
+                    {
+                        type: "input",
+                        name: "motherName",
+                        label: "Mother's Name",
+                        required: true,
+                        attrs: {
+                            placeholder: "Mother Name"
+                        },
+                        errorMessage: "Please enter Mother Name"
+                    },
+                    {
+                        type: "input",
+                        name: "qualification",
+                        label: "Qualification",
+                        required: true,
+                        attrs: {
+                            placeholder: "Qualification"
+                        },
+                        errorMessage: "Please enter Qualification"
+                    },
+
+                    {
+            type: "dropDown",
+            label: "country",
+            name: "country",
+            required: true,
+            config: {
+                code: "code",
+                value: "name"
+            },
+            errorMessage: "Please select Country",
+            value: "IN",
+            listObj: [{
+                code: "AU",
+                name: "Australia"
+            }, {
+                code: "IN",
+                name: "India"
+            }]
+        },
+
+                    {
+                        type: "input",
+                        name: "speciality",
+                        label: "Speciality",
+                        attrs: {
+                            placeholder: "Speciality"
+                        },
+                        note: "Please add multiple Speciality by <strong>comma(,)</strong> seprated"
+                    },
+
+                    {
+                        type: "input",
+                        inputType: "email",
+                        name: "email",
+                        label: "Email",
+                        attrs: {
+                            placeholder: "Email"
+                        }
+                    },
+
+                    {
+                        type: "input",
+                        inputType: "tel",
+                        name: "contact",
+                        label: "Contact",
+                        required: true,
+                        attrs: {
+                            placeholder: "Contact"
+                        },
+                        errorMessage: "Please enter Contact Number"
+                    },
+
+                    {
+                        type: "textArea",
+                        name: "permanentAddress",
+                        label: "Permanent Address",
+                        required: true,
+                        errorMessage: "Please enter Address",
+                        attrs: {
+                            rows: 5,
+                            cols: 60,
+                            placeholder: "Permanent Address"
+                        }
+                    },
+
+                    {
+                        type: "textArea",
+                        name: "temporaryAddress",
+                        label: "Temporary Address",
+                        attrs: {
+                            rows: 5,
+                            cols: 60,
+                            placeholder: "Temporary Address"
+                        }
+                    },
+
+                    {
+                        type: "checkBox",
+                        name: "status",
+                        value: 1,
+                        label: "Active"
+                    },
+                    {
+                        fields: [
+                        {
+                            type: "button",
+                            isValidation: true,
+                            label: "Add",
+                            onClick: function(obj) {
+                                
+                            }
+                        },
+                        {
+                            type: "button",
+                            buttonType: "reset",
+                            label: "Reset"
+                        }
+
+                        ]
+                    }
+                ]);
+
+</script>
+
+</html>
